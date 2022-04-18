@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/style.css')}}">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="landingPage">
+        <h1 class="centered" style="position: absolute;top: 2.5vw;padding-top: 1vh;padding-bottom: 1vh;border-radius: 5%;">Lobby</h1>
+        <div id="catalog">
+            <button id="btn1"><a href="home" class="btn">Home</a></button>
+            <button id="btn2"><a href="door" class="btn">Door</a></button>
+            <button id="btn3"><a href="room" class="btn">Room</a></button>
+            <button id="btn4"><a href="lobby" class="btn">Lobby</a></button>
+            <button id="btn5"><a href="weather" class="btn">Weather</a></button>
+        </div>
+        <div class="result">
+            <div class="graphs">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1467884/widgets/443184"></iframe>
+                <h2 class="centered" style="font-size: medium;display: inline-block;">Smoke Alarm</h2>
+            </div>
+            <div class="graphs">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1467884/widgets/443183"></iframe>
+                <h2 class="centered" style="font-size: medium;display: inline-block;">Lobby Light</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/style.css')}}">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="landingPage">
+        <h1 class="centered" style="position: absolute;top: 2.5vw;padding-top: 1vh;padding-bottom: 1vh;border-radius: 5%;">Weather</h1>
+        <div id="catalog">
+            <button id="btn1"><a href="home" class="btn">Home</a></button>
+            <button id="btn2"><a href="door" class="btn">Door</a></button>
+            <button id="btn3"><a href="room" class="btn">Room</a></button>
+            <button id="btn4"><a href="lobby" class="btn">Lobby</a></button>
+            <button id="btn5"><a href="weather" class="btn">Weather</a></button>
+        </div>
+        <div class="result">
+            <table>
+                <tr>
+                    <th>Date and Time</th>
+                    <th>Minimum Temperature</th>
+                    <th>Maximum Tempreature</th>
+                    <th>Porbability of Precepitation</th>
+                    <th>Weather</th>
+                </tr>
+                <tr>
+                    <td>{{data.time[0]}}</td>
+                    <td>{{data.max_temp[0]}}</td>
+                    <td>{{data.min_temp[0]}}</td>
+                    <td>{{data.pre[0]}}</td>
+                    <td>{{data.predicted_weather[0]}}</td>
+                </tr>
+                <tr>
+                    <td>{{data.time[1]}}</td>
+                    <td>{{data.max_temp[1]}}</td>
+                    <td>{{data.min_temp[1]}}</td>
+                    <td>{{data.pre[1]}}</td>
+                    <td>{{data.predicted_weather[1]}}</td>
+                </tr>
+                <tr>
+                    <td>{{data.time[2]}}</td>
+                    <td>{{data.max_temp[2]}}</td>
+                    <td>{{data.min_temp[2]}}</td>
+                    <td>{{data.pre[2]}}</td>
+                    <td>{{data.predicted_weather[2]}}</td>
+                </tr>
+                <tr>
+                    <td>{{data.time[3]}}</td>
+                    <td>{{data.max_temp[3]}}</td>
+                    <td>{{data.min_temp[3]}}</td>
+                    <td>{{data.pre[3]}}</td>
+                    <td>{{data.predicted_weather[3]}}</td>
+                </tr>
+                <tr>
+                    <td>{{data.time[4]}}</td>
+                    <td>{{data.max_temp[4]}}</td>
+                    <td>{{data.min_temp[4]}}</td>
+                    <td>{{data.pre[4]}}</td>
+                    <td>{{data.predicted_weather[4]}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
