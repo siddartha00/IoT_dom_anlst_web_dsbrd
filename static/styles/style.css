@@ -115,6 +115,9 @@ button{
 button:hover{
     border-bottom: 2px solid rgb(9, 117, 144);
 }
+.button_active{
+    border-bottom: 2px solid rgb(9, 117, 144);
+}
 #view_d{
     /* z-index: 1; */
     position: absolute;
