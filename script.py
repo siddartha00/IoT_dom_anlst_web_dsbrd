@@ -39,8 +39,10 @@ def weather():
     data = {
         "country_code": str(list_of_data['sys']['country']),
         "coordinate": str(list_of_data['coord']['lon']) + ' ' + str(list_of_data['coord']['lat']),
-        "temp": str(list_of_data['main']['temp']) + 'k',
-        "temp_cel": te_cel(list_of_data['main']['temp']) + 'C',
+        "temp_feel": te_cel(list_of_data['main']['feels_like']) + 'C',
+        "temp": te_cel(list_of_data['main']['temp']) + 'C',
+        "temp_min": te_cel(list_of_data['main']['temp_min']) + 'C',
+        "temp_max": te_cel(list_of_data['main']['temp_max']) + 'C',
         "pressure": str(list_of_data['main']['pressure']),
         "humidity": str(list_of_data['main']['humidity']),
         "predicted_weather": [
@@ -63,6 +65,13 @@ def weather():
             te_cel(prediction_data['list'][2]['main']['temp_min']),
             te_cel(prediction_data['list'][3]['main']['temp_min']),
             te_cel(prediction_data['list'][4]['main']['temp_min']),
+        ],
+        "humidity": [
+            str(prediction_data['list'][0]['main']['humidity']),
+            str(prediction_data['list'][1]['main']['humidity']),
+            str(prediction_data['list'][2]['main']['humidity']),
+            str(prediction_data['list'][3]['main']['humidity']),
+            str(prediction_data['list'][4]['main']['humidity']),
         ],
         "pre":[
             str(prediction_data['list'][0]['pop']),
