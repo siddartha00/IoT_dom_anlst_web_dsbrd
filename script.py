@@ -44,7 +44,7 @@ def weather():
         "temp_min": te_cel(list_of_data['main']['temp_min']) + 'C',
         "temp_max": te_cel(list_of_data['main']['temp_max']) + 'C',
         "pressure": str(list_of_data['main']['pressure']),
-        "humidity": str(list_of_data['main']['humidity']),
+        "humid": str(list_of_data['main']['humidity']),
         "predicted_weather": [
             str(prediction_data['list'][0]['weather'][0]['description']),
             str(prediction_data['list'][1]['weather'][0]['description']),
