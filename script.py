@@ -8,7 +8,7 @@ import json
 app = Flask(__name__)
 @app.route('/')
 def hello():
-    return render_template('html.html')
+    return render_template('index.html')
 @app.route('/weather')
 def weather():
     api_key = 'd52d9455f88f7b7aa01126e1759d893f'
@@ -93,6 +93,6 @@ def room():
     return render_template('room.html')
 @app.route('/home')
 def home():
-    return render_template('html.html')
+    return render_template('index.html')
 if __name__ == '__main__':
     app.run(debug= True, host="0.0.0.0", port=5000)
